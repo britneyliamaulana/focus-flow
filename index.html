@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Focus Flow</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Focus Flow</h1>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Notes</a></li>
+        <li><a href="#">Tasks</a></li>
+        <li><a href="#">Timer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+
+    <section class="welcome-card">
+      <h2>Welcome Back 👋</h2>
+      <p>Stay productive and organized today.</p>
+    </section>
+
+    <section class="notes-section">
+
+      <div class="section-header">
+        <h2>Quick Notes</h2>
+      </div>
+
+      <form id="note-form">
+
+        <input
+          type="text"
+          id="note-title"
+          placeholder="Note title"
+          required
+        >
+
+        <textarea
+          id="note-content"
+          placeholder="Write your note here..."
+          required
+        ></textarea>
+
+        <button type="submit">Save Note</button>
+
+      </form>
+
+      <div id="notes-container"></div>
+
+    </section>
+
+  </main>
+
+  <script type="module" src="./js/main.js"></script>
+
+</body>
+</html>
