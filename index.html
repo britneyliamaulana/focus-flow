@@ -19,74 +19,136 @@
   <header class="header">
     <h1>Focus Flow</h1>
 
-    <nav>
+    <button class="hamburger" id="hamburger-btn">☰</button>
+
+    <nav id="nav-menu">
       <ul class="nav-links">
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Notes</a></li>
-        <li><a href="#">Tasks</a></li>
-        <li><a href="#">Timer</a></li>
+        <li><a href="#" data-target="dashboard-section">Dashboard</a></li>
+        <li><a href="#" data-target="notes-section">Notes</a></li>
+        <li><a href="#" data-target="tasks-section">Tasks</a></li>
+        <li><a href="#" data-target="timer-section">Timer</a></li>
       </ul>
     </nav>
+
+    <button id="theme-toggle">🌙 Dark Mode</button>
   </header>
 
   <main class="dashboard">
 
-    <section class="welcome-card">
-      <h2>Welcome Back 👋</h2>
-      <p>Stay productive and organized today.</p>
+      <section class="welcome-card">
+        <h2>Welcome Back 👋</h2>
+        <p>Stay productive and organized today.</p>
+      </section>
+
+      <section class="quote-section">
+        <div class="section-header">
+          <h2>Daily Motivation</h2>
+        </div>
+        <div id="quote-container">
+          Loading quote...
+        </div>
+      </section>
+
+
+    <!-- DASHBOARD -->
+    <section id="dashboard-section" class="page-section">
+
+      <section class="stats-section">
+        <h2>Productivity Overview</h2>
+
+        <div class="stats-grid">
+
+          <div class="stat-card">
+            <h3 id="total-tasks">0</h3>
+            <p>Total Tasks</p>
+          </div>
+
+          <div class="stat-card">
+            <h3 id="completed-tasks">0</h3>
+            <p>Completed</p>
+          </div>
+
+          <div class="stat-card">
+            <h3 id="remaining-tasks">0</h3>
+            <p>Remaining</p>
+          </div>
+
+          <div class="stat-card">
+            <h3 id="completion-rate">0%</h3>
+            <p>Progress</p>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="worldtime-section">
+        <div class="section-header">
+          <h2>World Clock</h2>
+        </div>
+        <div id="worldtime-container">
+          <p>Loading time zones...</p>
+        </div>
+      </section>
+
+    
     </section>
 
-    <section class="notes-section">
+    <!-- NOTES -->
+    <section id="notes-section" class="page-section">
 
-      <div class="section-header">
-        <h2>Quick Notes</h2>
-      </div>
+      <section class="notes-section">
+        <div class="section-header">
+          <h2>Quick Notes</h2>
+        </div>
 
-      <form id="note-form">
+        <form id="note-form">
+          <input type="text" id="note-title" placeholder="Note title" required>
+          <textarea id="note-content" placeholder="Write your note here..." required></textarea>
+          <button type="submit">Save Note</button>
+        </form>
 
-        <input
-          type="text"
-          id="note-title"
-          placeholder="Note title"
-          required
-        >
-
-        <textarea
-          id="note-content"
-          placeholder="Write your note here..."
-          required
-        ></textarea>
-
-        <button type="submit">Save Note</button>
-
-      </form>
-
-      <div id="notes-container"></div>
+        <div id="notes-container"></div>
+      </section>
 
     </section>
 
-    <section class="tasks-section">
+    <!-- TASKS -->
+    <section id="tasks-section" class="page-section">
 
-  <div class="section-header">
-    <h2>Task Planner</h2>
-  </div>
+      <section class="tasks-section">
+        <div class="section-header">
+          <h2>Task Planner</h2>
+        </div>
 
-  <form id="task-form">
-    <input
-      type="text"
-      id="task-input"
-      placeholder="Enter a task..."
-      required
-    >
+        <form id="task-form">
+          <input type="text" id="task-input" placeholder="Enter a task..." required>
+          <button type="submit">Add Task</button>
+        </form>
 
-    <button type="submit">
-      Add Task
-    </button>
-  </form>
+        <div id="tasks-container"></div>
+      </section>
 
-  <div id="tasks-container"></div>
+    </section>
 
-</section>
+    <!-- TIMER -->
+    <section id="timer-section" class="page-section">
+
+      <section class="timer-section">
+        <div class="section-header">
+          <h2>Focus Timer</h2>
+        </div>
+
+        <div class="timer-display" id="timer-display">25:00</div>
+
+        <div class="timer-controls">
+          <button id="start-btn">Start</button>
+          <button id="pause-btn">Pause</button>
+          <button id="reset-btn">Reset</button>
+        </div>
+
+      </section>
+
+    </section>
 
   </main>
 
